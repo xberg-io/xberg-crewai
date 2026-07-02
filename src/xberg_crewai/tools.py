@@ -3,8 +3,8 @@
 from typing import Literal
 
 from crewai.tools import BaseTool
-from xberg import ExtractionConfig, extract_file_sync
 from pydantic import BaseModel, Field
+from xberg import ExtractionConfig, extract_file_sync
 
 
 class ExtractInput(BaseModel):

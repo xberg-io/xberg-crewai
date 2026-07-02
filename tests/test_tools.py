@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from xberg_crewai.tools import ExtractInput, XbergExtractMetadataTool, XbergExtractTool, MetadataInput
+from xberg_crewai.tools import ExtractInput, MetadataInput, XbergExtractMetadataTool, XbergExtractTool
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures"
 SAMPLE_TXT = str(FIXTURES_DIR / "sample.txt")

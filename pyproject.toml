@@ -1,89 +1,64 @@
 [build-system]
 build-backend = "hatchling.build"
-requires = [ "hatchling" ]
+requires = ["hatchling"]
 
 [project]
 name = "xberg-crewai"
 version = "0.1.0"
 description = "Xberg document extraction tool for CrewAI agents"
 readme = "README.md"
-keywords = [
-  "ai",
-  "crewai",
-  "document-extraction",
-  "xberg",
-  "ocr",
-  "pdf",
-  "text-extraction",
-]
+keywords = ["ai", "crewai", "document-extraction", "xberg", "ocr", "pdf", "text-extraction"]
 license = "MIT"
 maintainers = [
-  { name = "Na'aman Hirschfeld", email = "naaman@xberg.io" },
-  { name = "Varun Tandon", email = "varun@xberg.io" },
+    { name = "Na'aman Hirschfeld", email = "naaman@xberg.io" },
+    { name = "Varun Tandon", email = "varun@xberg.io" },
 ]
-authors = [
-  { name = "Xberg.dev", email = "contact@xberg.io" },
-]
+authors = [{ name = "Xberg.dev", email = "contact@xberg.io" }]
 requires-python = ">=3.10"
 classifiers = [
-  "Development Status :: 4 - Beta",
-  "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.10",
-  "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3.12",
-  "Programming Language :: Python :: 3.13",
-  "Programming Language :: Python :: 3.14",
-  "Topic :: Scientific/Engineering :: Artificial Intelligence",
-  "Topic :: Text Processing :: General",
-  "Typing :: Typed",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: General",
+    "Typing :: Typed",
 ]
-dependencies = [
-  "crewai>=1",
-  "xberg>=1.0.0",
-]
+dependencies = ["crewai>=1", "xberg>=1.0.0"]
 urls.Changelog = "https://github.com/xberg-io/xberg-crewai/blob/main/CHANGELOG.md"
 urls.Homepage = "https://github.com/xberg-io/xberg-crewai"
 urls.Xberg = "https://github.com/xberg-io/xberg"
 urls.Repository = "https://github.com/xberg-io/xberg-crewai"
 
 [dependency-groups]
-dev = [
-  "mypy>=1.19",
-  "pre-commit>=4",
-  "pytest>=9",
-  "pytest-cov>=6",
-  "ruff>=0.14",
-]
+dev = ["mypy>=1.19", "pre-commit>=4", "pytest>=9", "pytest-cov>=6", "ruff>=0.14"]
 
 [tool.hatch]
-build.targets.sdist.include = [
-  "src/xberg_crewai",
-  "CHANGELOG.md",
-  "LICENSE",
-  "README.md",
-  "pyproject.toml",
-]
-build.targets.wheel.packages = [ "src/xberg_crewai" ]
+build.targets.sdist.include = ["src/xberg_crewai", "CHANGELOG.md", "LICENSE", "README.md", "pyproject.toml"]
+build.targets.wheel.packages = ["src/xberg_crewai"]
 
 [tool.ruff]
 target-version = "py310"
 line-length = 120
-lint.select = [ "ALL" ]
-lint.ignore = [ "ANN401", "COM812", "D100", "D104", "D107", "D203", "D213", "ISC001", "PLR0913" ]
+lint.select = ["ALL"]
+lint.ignore = ["ANN401", "COM812", "D100", "D104", "D107", "D203", "D213", "ISC001", "PLR0913"]
 lint.per-file-ignores."tests/**" = [
-  "ANN",
-  "D",
-  "PLC0415",
-  "PLR2004",
-  "RUF043",
-  "S101",
-  "S108",
-  "SLF001",
-  "TC001",
-  "TC003",
+    "ANN",
+    "D",
+    "PLC0415",
+    "PLR2004",
+    "RUF043",
+    "S101",
+    "S108",
+    "SLF001",
+    "TC001",
+    "TC003",
 ]
 
 [tool.mypy]
@@ -91,8 +66,8 @@ python_version = "3.10"
 strict = true
 
 [tool.pytest]
-ini_options.testpaths = [ "tests" ]
+ini_options.testpaths = ["tests"]
 
 [tool.coverage]
-run.source = [ "xberg_crewai" ]
+run.source = ["xberg_crewai"]
 report.fail_under = 80
